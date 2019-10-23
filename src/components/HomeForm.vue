@@ -1,38 +1,40 @@
 <template>
   <div>
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form @reset="onReset" v-if="show">
         <b-form-group
           id="input-group-firstname"
           label="Prénom :"
-          label-for="name"
+          label-for="effirstname"
         ><b-form-input
-          id="input-1"
-          v-model="form.firstname"
+          id="effirstname"
+          v-model="form.effirstname"
           type="text"
           required
           placeholder="Entrer votre prénom"
         ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-name" label="Nom :" label-for="name">
+        <b-form-group id="input-group-name" label="Nom :" label-for="efname">
           <b-form-input
-            id="name"
-            v-model="form.name"
+            id="efname"
+            v-model="form.efname"
             required
             placeholder="Entrer votre nom"
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-name" label="Nom de votre société :" label-for="society">
+        <b-form-group id="input-group-name" label="Nom de votre société :" label-for="efsociety">
           <b-form-input
-            id="society"
-            v-model="form.society"
+            id="efsociety"
+            v-model="form.efsociety"
             required
             placeholder="Nom de votre société"
           ></b-form-input>
         </b-form-group>
 
-        <b-button type="submit" class="text-right" variant="primary">Commencer le test</b-button>
+          <router-link :to="{ name: 'questionnaire', params: { 'effirstname': form.effirstname, 'efname': form.efname, 'efsociety': form.efsociety }}">
+            <b-button type="button" variant="primary">Commencer le test</b-button>
+          </router-link>
       </b-form>
   </div>
 </template>
@@ -43,24 +45,20 @@ export default {
   data () {
     return {
       form: {
-        firstname: '',
-        name: '',
-        society: ''
+        effirstname: '',
+        efname: '',
+        efsociety: ''
       },
       show: true
     }
   },
   methods: {
-    onSubmit (evt) {
-      evt.preventDefault()
-      alert(JSON.stringify(this.form))
-    },
     onReset (evt) {
       evt.preventDefault()
       // Reset our form values
-      this.form.firstname = ''
-      this.form.name = ''
-      this.form.society = ''
+      this.form.effirstname = ''
+      this.form.efname = ''
+      this.form.efsociety = ''
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
