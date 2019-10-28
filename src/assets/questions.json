@@ -1,0 +1,86 @@
+[
+  {
+    "efquestion": "Qui a écrit les misérables ?",
+    "efanswers": [
+      "Françoise Bourdin",
+      "Marc Levy",
+      "Victor Hugo"
+    ],
+    "efvalid": 2
+  },
+  {
+    "efquestion": "Quelle est la voiture dans Retour vers le futur ?",
+    "efanswers": [
+      "Doloréane",
+      "Dodge Charger"
+    ],
+    "efvalid": 0
+  },
+  {
+    "efquestion": "Combien de dieu trône à l'Olympe ?",
+    "efanswers": [
+      "10",
+      "22",
+      "8",
+      "12"
+    ],
+    "efvalid": 3
+  },
+  {
+    "efquestion": "Quelle est la capitale de l'Australie ?",
+    "efanswers": [
+      "Sidney",
+      "Canberra",
+      "Melbourne",
+      "Perth"
+    ],
+    "efvalid": 1
+  },{
+    "efquestion": "Quelle pièce est absolument à protéger dans un jeu d'échec ?",
+    "efanswers": [
+      "La Reine",
+      "Le Roi",
+      "Le Valet",
+      "Réponse D"
+    ],
+    "efvalid": 1
+  },
+  {
+    "efquestion": "Quelle ville est surnommé « big Apple » aux USA ?",
+    "efanswers": [
+      "Chicago",
+      "San Francisco",
+      "New York",
+      "Miami"
+    ],
+    "efvalid": 2
+  },
+  {
+    "efquestion": "Qui a marqué le troisième but de la finale de la coupe du monde 1998 ?",
+    "efanswers": [
+      "Zidane",
+      "Petit",
+      "Deschamps",
+      "Barthez"
+    ],
+    "efvalid": 1
+  },
+  {
+    "efquestion": "Quelle est la différence entre un chameau et un dromadaire ?",
+    "efanswers": [
+      "Le nombre de dents",
+      "Le nombre de bosses"
+    ],
+    "efvalid": 1
+  },
+  {
+    "efquestion": "Quelle équipe a remporter l'Euro 2016",
+    "efanswers": [
+      "France",
+      "Portugal",
+      "Espagne",
+      "Allemagne"
+    ],
+    "efvalid": 1
+  }
+]

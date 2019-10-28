@@ -29,6 +29,7 @@
 </template>
 
 <script>
+var json = require('../assets/questions.json')
 export default {
   name: 'Quizz',
   data () {
@@ -38,28 +39,7 @@ export default {
       efscore: 0,
       efresponse: false,
       efvar: [...Array(4)],
-      efquestions: [
-        {
-          efquestion: 'Quelle ville a le code postal 44000 ?',
-          efanswers: [
-            'Paris',
-            'Nantes',
-            'Marseille',
-            'Montrouge'
-          ],
-          efvalid: 1
-        },
-        {
-          efquestion: 'Quelle ville a le code postal 13000 ?',
-          efanswers: [
-            'Marseille',
-            'Toulouse',
-            'Lille',
-            'La Ferrière ?'
-          ],
-          efvalid: 0
-        }
-      ]
+      efquestions: json
     }
   },
   methods: {
@@ -74,7 +54,6 @@ export default {
       if (this.efindex === this.efquestions.length - 1) {
         this.effin = true
       }
-      console.log(this.efvar)
     },
     next: function () {
       this.efresponse = false
