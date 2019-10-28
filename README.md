@@ -7,5 +7,5 @@ Florian Elie
   * Créer le questionaire avec les questions du JSON :white_check_mark:
   * Récupérer le résultat du quizz :white_check_mark:
   * Utiliser PouchDB :white_check_mark:
-   + Sauvegarder les résultats :white_check_mark:
-   + Lire les résultats dans un tableau :white_check_mark:
+  * Sauvegarder les résultats :white_check_mark:
+  * Lire les résultats dans un tableau :white_check_mark:
