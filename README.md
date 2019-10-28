@@ -1,29 +1,9 @@
 # app-questionnaire-vue
+Florian Elie
 
-## Project setup
-```
-npm install
-```
+## Objectifs
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  * Créer le JSON contenant les questions 
+  * Créer le questionaire avec les questions du JSON
+  * Récupérer le résultat du quizz
+  * Commencer à utiliser PouchDB
