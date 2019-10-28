@@ -7,6 +7,9 @@
           <b-nav-item active to="/">Accueil</b-nav-item>
           <b-nav-item to="/about">A propos</b-nav-item>
         </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item right variant="primary" to="/admin">Administration</b-nav-item>
+        </b-navbar-nav>
       </b-navbar>
     </div>
     <router-view/>

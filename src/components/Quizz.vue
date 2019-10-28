@@ -2,6 +2,7 @@
   <div>
     <div class="container">
       <h1>Quizz</h1>
+      <!--  Récupérer les paramètres nom, prénom & société -->
       <p>Bonjour, {{this.$route.params.efname}} {{this.$route.params.effirstname}} <strong>entreprise {{this.$route.params.efsociety}}</strong></p>
       <h3>Question N° {{ efindex + 1 }}</h3>
       <hr>
@@ -29,11 +30,14 @@
 </template>
 
 <script>
+import PouchDB from 'pouchdb-browser'
+
 var json = require('../assets/questions.json')
 export default {
   name: 'Quizz',
   data () {
     return {
+      db: PouchDB('Quizz'),
       effin: false,
       efindex: 0,
       efscore: 0,
@@ -52,6 +56,7 @@ export default {
       this.efresponse = true
       this.efvar[this.efquestions[this.efindex].efvalid] = 'success'
       if (this.efindex === this.efquestions.length - 1) {
+        this.addToDb(this.efscore, this.efquestions.length)
         this.effin = true
       }
     },
@@ -59,6 +64,21 @@ export default {
       this.efresponse = false
       this.efvar = [...Array(4)]
       this.efindex++
+    },
+    addToDb: function (result, nbQuestions) {
+      this.db.put({
+        _id: new Date().getTime().toString(),
+        date: new Date().toISOString(),
+        efname: this.$route.params.efname,
+        effirstName: this.$route.params.effirstname,
+        efsociety: this.$route.params.efsociety,
+        nbQuestion: nbQuestions,
+        result: result
+      }).then(function (response) {
+        console.log('Résultat correctement enregistré en base de données')
+      }).catch(function (err) {
+        console.log('Erreur pendant l\'enregistrement en bdd :' + err)
+      })
     }
   }
 }
