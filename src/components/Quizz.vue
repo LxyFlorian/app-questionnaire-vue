@@ -49,8 +49,10 @@ export default {
   methods: {
     action: function (efindex) {
       if (efindex === this.efquestions[this.efindex].efvalid) {
+        // incrémenter le score
         this.efscore++
       } else {
+        // afficher la réponse sélectionnée en rouge
         this.efvar[efindex] = 'danger'
       }
       this.efresponse = true
@@ -66,6 +68,7 @@ export default {
       this.efindex++
     },
     addToDb: function (result, nbQuestions) {
+      // ajouter dans la base
       this.db.put({
         _id: new Date().getTime().toString(),
         date: new Date().toISOString(),
