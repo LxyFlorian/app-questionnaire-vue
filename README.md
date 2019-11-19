@@ -13,4 +13,4 @@ Florian Elie
 ## Choses à savoir
 
 Accès administration : 
-> Admin | Connexion stockée en cookie
+> "admin" | Connexion stockée en cookie
