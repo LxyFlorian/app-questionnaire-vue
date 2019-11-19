@@ -3,3 +3,5 @@ module.exports = {
     'no-console': 'off',
   },
 };
+
+// permettre les console.log en production

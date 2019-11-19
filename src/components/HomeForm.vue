@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Formulaire de création du quizz (Prénom, Nom & Société) -->
       <b-form @reset="onReset" v-if="show">
         <b-form-group
           id="input-group-firstname"
@@ -31,7 +32,7 @@
             placeholder="Nom de votre société"
           ></b-form-input>
         </b-form-group>
-
+        <!-- Transmettre les données à la route /questionnaire qui correspond au Composant Quizz-->
           <router-link :to="{ name: 'questionnaire', params: { 'effirstname': form.effirstname, 'efname': form.efname, 'efsociety': form.efsociety }}">
             <b-button type="button" variant="primary">Commencer le test</b-button>
           </router-link>
