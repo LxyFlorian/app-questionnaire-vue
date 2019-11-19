@@ -9,3 +9,8 @@ Florian Elie
   * Utiliser PouchDB :white_check_mark:
   * Sauvegarder les résultats :white_check_mark:
   * Lire les résultats dans un tableau :white_check_mark:
+
+## Choses à savoir
+
+Accès administration : 
+> Admin | Connexion stockée en cookie
